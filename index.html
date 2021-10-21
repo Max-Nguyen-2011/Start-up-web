@@ -1,34 +1,127 @@
-<!DOCTYPE html>
-<html>
-  <head>
-
-    <title>Startup</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-
-    <!-- Bootstrap CSS from a CDN. This way you don't have to include the bootstrap file yourself -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <!-- Your own stylesheet -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
-    <div class="container d-flex align-items-center h-100"> 
-      <div class="row">
-        <header class="text-center col-12">
-          <h1 class="text-uppercase"><strong>The biggest startup event of the year</strong></h1>
-        </header>
-        <div class="buffer col-12"></div>
-        <section class="text-center col-12">
-        <hr>
-        <a href="https://mailchi.mp/4016a608b6a5/startup">
-        <button  class="btn btn-danger btn-xl">Find out more</button>
-        </a>
-        </section>
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxnology Start-up company</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+   <!-- navbar here -->
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo">
+        <a href="#">Maxnology</a>
+      </div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
       </div>
     </div>
-  </body>
+  </nav>
+  <div class="banner"></div>
+<!-- About -->
+<section id="about">
+<div class="section">
+  <div class="con">
+    <div class="content-section">
+      <div class="titles">
+        <h1>About Us</h1>
+      </div>
+      <div class="content">
+        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.</p>
+      </div>
+      <form method="get" action="#more">
+        <button class="btn2"type="submit">Continue</button>
+      </form>
+      <div class="social">
+        <a href="https://www.facebook.com/7MAX9/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/_maz.kun_/"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/maxnguyen2011"><i class="fab fa-twitter "></i></a>
+      </div>
+    </div>
+    <div class="image-section">
+      <img src="img/code6.jpg">
+    </div>
+  </div>
+</div>
+</section>
+<!-- our team -->
+<section id="more">
+  <h2 style="text-align:center">Our Team</h2>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="img/Max1.jpg" alt="Max" style="width:100%">
+        <div class="container">
+          <h2>Quan Hoang</h2>
+          <p class="title">CEO & Founder</p>
+          <p>My name is Quan Hoang. I am the CEO & Founder of Maxnology.</p>
+          <p>Zerosmg3@gmail.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img src="img/Max2.jpg" alt="Maz" style="width:100%">
+        <div class="container">
+          <h2>Max Nguyen</h2>
+          <p class="title">Manager</p>
+          <p>My name is Max Nguyen and I am manager of Maxnology</p>
+          <p>Maxnguyen1120@gmail.com</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="column">
+      <div class="card">
+        <img src="img/Max3.jpg" alt="Mzie" style="width:100%">
+        <div class="container">
+          <h2>Maximum</h2>
+          <p class="title">IT</p>
+          <p>My name is Maximum and I'm the main website developer for Maxnology</p>
+          <p>Devil ain't use gmail</p>
+        </div>
+      </div>
+    </div>
+  </div>  
+</section>
+<!-- script -->
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+
+</body>
 </html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="service.css"/>
+    <title>Document</title>
+</head>
+<body>
+  <nav class="navbar">
+      <div class="content">
+        <div class="logo">
+          <a href="#">Maxnology</a>
+        </div>
+        <ul class="menu-list">
+          <div class="icon cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">About</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="icon menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+    <!-- <div class="banner"></div> -->
+<!-- service -->
+<div class="body">
+    <div class="container">
+        <div class="serviceBox">
+            <div class="iconservice" style="--i:#4eb7ff">
+                <ion-icon name="color-palette-outline"></ion-icon>
+            </div>
+            <div class="cac">
+                <h2>Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dignissimos nemo mollitia suscipit, totam facere inventore maiores consequuntur in dicta minus eaque, ex dolorum architecto accusamus assumenda, porro exercitationem non.</p>
+            </div>
+        </div>
+        <div class="serviceBox">
+            <div class="iconservice" style="--i:#fd6494">
+                <ion-icon name="color-palette-outline"></ion-icon>
+            </div>
+            <div class="cac">
+                <h2>Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi est quo cum tempore? Eveniet, fuga architecto? Vitae tempore esse, omnis neque tenetur sed ab, excepturi cum mollitia vel assumenda porro?</p>
+            </div>
+        </div>
+        <div class="serviceBox">
+            <div class="iconservice" style="--i:#43f390">
+                <ion-icon name="color-palette-outline"></ion-icon>
+            </div>
+            <div class="cac">
+                <h2>Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi est quo cum tempore? Eveniet, fuga architecto? Vitae tempore esse, omnis neque tenetur sed ab, excepturi cum mollitia vel assumenda porro?</p>
+            </div>
+        </div>
+        <div class="serviceBox">
+            <div class="iconservice" style="--i:#ffb508">
+                <ion-icon name="color-palette-outline"></ion-icon>
+            </div>
+            <div class="cac">
+                <h2>Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi est quo cum tempore? Eveniet, fuga architecto? Vitae tempore esse, omnis neque tenetur sed ab, excepturi cum mollitia vel assumenda porro?</p>
+            </div>
+        </div>
+        <div class="serviceBox">
+            <div class="iconservice" style="--i:#37ba82">
+                <ion-icon name="color-palette-outline"></ion-icon>
+            </div>
+            <div class="cac">
+                <h2>Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi est quo cum tempore? Eveniet, fuga architecto? Vitae tempore esse, omnis neque tenetur sed ab, excepturi cum mollitia vel assumenda porro?</p>
+            </div>
+        </div>
+        <div class="serviceBox">
+            <div class="iconservice" style="--i:#cd57ff">
+                <ion-icon name="color-palette-outline"></ion-icon>
+            </div>
+            <div class="cac">
+                <h2>Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi est quo cum tempore? Eveniet, fuga architecto? Vitae tempore esse, omnis neque tenetur sed ab, excepturi cum mollitia vel assumenda porro?</p>
+            </div>
+        </div>
+    </div>
+</div>
+  <!-- script -->
+<script>
+  const body = document.querySelector("body");
+  const navbar = document.querySelector(".navbar");
+  const menuBtn = document.querySelector(".menu-btn");
+  const cancelBtn = document.querySelector(".cancel-btn");
+  menuBtn.onclick = ()=>{
+    navbar.classList.add("show");
+    menuBtn.classList.add("hide");
+    body.classList.add("disabled");
+  }
+  cancelBtn.onclick = ()=>{
+    body.classList.remove("disabled");
+    navbar.classList.remove("show");
+    menuBtn.classList.remove("hide");
+  }
+  window.onscroll = ()=>{
+    this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+  }
+</script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
